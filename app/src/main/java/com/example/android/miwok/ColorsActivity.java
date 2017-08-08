@@ -23,7 +23,18 @@ public class ColorsActivity extends AppCompatActivity {
         words.add(new Word("black", "kululli",R.drawable.color_black));
         words.add(new Word("white", "kelelli",R.drawable.color_white));
 
-        WordAdapter itemsAdapter = new WordAdapter(this, words,R.color.category_colors);
+        ArrayList<Integer> audioResourceId = new ArrayList<>();
+        audioResourceId.add(R.raw.color_red);
+        audioResourceId.add(R.raw.color_mustard_yellow);
+        audioResourceId.add(R.raw.color_dusty_yellow);
+        audioResourceId.add(R.raw.color_green);
+        audioResourceId.add(R.raw.color_brown);
+        audioResourceId.add(R.raw.color_gray);
+        audioResourceId.add(R.raw.color_black);
+        audioResourceId.add(R.raw.color_white);
+
+
+        WordAdapter itemsAdapter = new WordAdapter(this, words,R.color.category_colors, audioResourceId);
 
         ListView listView = (ListView) findViewById(R.id.list);
 

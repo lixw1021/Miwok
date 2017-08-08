@@ -1,5 +1,6 @@
 package com.example.android.miwok;
 
+import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.support.v7.app.AppCompatActivity;
@@ -28,7 +29,19 @@ public class NumbersActivity extends AppCompatActivity {
         words.add(new Word("nine", "wo’e",R.drawable.number_nine));
         words.add(new Word("ten", "na’aacha", R.drawable.number_ten ));
 
-        WordAdapter itemsAdapter = new WordAdapter(this, words,R.color.category_numbers);
+        ArrayList<Integer> audioResourceId = new ArrayList<>();
+        audioResourceId.add(R.raw.number_one);
+        audioResourceId.add(R.raw.number_two);
+        audioResourceId.add(R.raw.number_three);
+        audioResourceId.add(R.raw.number_four);
+        audioResourceId.add(R.raw.number_five);
+        audioResourceId.add(R.raw.number_six);
+        audioResourceId.add(R.raw.number_seven);
+        audioResourceId.add(R.raw.number_eight);
+        audioResourceId.add(R.raw.number_nine);
+        audioResourceId.add(R.raw.number_ten);
+
+        WordAdapter itemsAdapter = new WordAdapter(this, words, R.color.category_numbers ,audioResourceId);
 
         ListView listView = (ListView) findViewById(R.id.list);
 

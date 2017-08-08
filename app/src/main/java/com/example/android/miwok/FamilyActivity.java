@@ -25,7 +25,19 @@ public class FamilyActivity extends AppCompatActivity {
         words.add(new Word("grandmother ", "ama",R.drawable.family_grandmother));
         words.add(new Word("grandfather", "paapa",R.drawable.family_grandfather));
 
-        WordAdapter itemsAdapter = new WordAdapter(this, words, R.color.category_family);
+        ArrayList<Integer> audioResourceId = new ArrayList<>();
+        audioResourceId.add(R.raw.family_father);
+        audioResourceId.add(R.raw.family_mother);
+        audioResourceId.add(R.raw.family_son);
+        audioResourceId.add(R.raw.family_daughter);
+        audioResourceId.add(R.raw.family_older_brother);
+        audioResourceId.add(R.raw.family_younger_brother);
+        audioResourceId.add(R.raw.family_older_sister);
+        audioResourceId.add(R.raw.family_younger_sister);
+        audioResourceId.add(R.raw.family_grandmother);
+        audioResourceId.add(R.raw.family_grandfather);
+
+        WordAdapter itemsAdapter = new WordAdapter(this, words, R.color.category_family, audioResourceId);
 
         ListView listView = (ListView) findViewById(R.id.list);
 

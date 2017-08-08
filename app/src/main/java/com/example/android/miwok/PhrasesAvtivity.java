@@ -25,7 +25,19 @@ public class PhrasesAvtivity extends AppCompatActivity {
         words.add(new Word("Let’s go.", "yoowutis"));
         words.add(new Word("Come here.", "әnni'nem"));
 
-        WordAdapter itemsAdapter = new WordAdapter(this, words, R.color.category_phrases);
+        ArrayList<Integer> audioResourceId = new ArrayList<>();
+        audioResourceId.add(R.raw.phrase_where_are_you_going);
+        audioResourceId.add(R.raw.phrase_what_is_your_name);
+        audioResourceId.add(R.raw.phrase_my_name_is);
+        audioResourceId.add(R.raw.phrase_how_are_you_feeling);
+        audioResourceId.add(R.raw.phrase_im_feeling_good);
+        audioResourceId.add(R.raw.phrase_are_you_coming);
+        audioResourceId.add(R.raw.phrase_yes_im_coming);
+        audioResourceId.add(R.raw.phrase_im_coming);
+        audioResourceId.add(R.raw.phrase_lets_go);
+        audioResourceId.add(R.raw.phrase_come_here);
+
+        WordAdapter itemsAdapter = new WordAdapter(this, words, R.color.category_phrases, audioResourceId);
 
         ListView listView = (ListView) findViewById(R.id.list);
 
