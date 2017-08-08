@@ -28,6 +28,7 @@ public class FamilyActivity extends AppCompatActivity {
         WordAdapter itemsAdapter = new WordAdapter(this, words);
 
         ListView listView = (ListView) findViewById(R.id.list);
+        listView.setBackgroundResource(R.color.category_family);
 
         listView.setAdapter(itemsAdapter);
     }
