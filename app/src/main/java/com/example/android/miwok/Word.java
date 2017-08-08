@@ -7,10 +7,17 @@ package com.example.android.miwok;
 public class Word {
     private String miwokWord;
     private String defaultWord;
+    private int imageResourceId;
 
     public Word(String miwokWord, String defaultWord) {
         this.miwokWord = miwokWord;
         this.defaultWord = defaultWord;
+    }
+
+    public Word(String miwokWord, String defaultWord, int imageResourceId) {
+        this.miwokWord = miwokWord;
+        this.defaultWord = defaultWord;
+        this.imageResourceId = imageResourceId;
     }
 
     public String getMiwokWord() {
@@ -19,5 +26,9 @@ public class Word {
 
     public String getDefaultWord() {
         return defaultWord;
+    }
+
+    public int getImageResourceId() {
+        return imageResourceId;
     }
 }
