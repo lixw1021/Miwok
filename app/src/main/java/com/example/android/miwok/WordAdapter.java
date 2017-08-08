@@ -17,9 +17,11 @@ import java.util.List;
  */
 
 public class WordAdapter extends ArrayAdapter<Word> {
+    private int colorResource;
 
-    public WordAdapter(@NonNull Context context, @NonNull List<Word> words) {
+    public WordAdapter(@NonNull Context context, @NonNull List<Word> words, int colorResource) {
         super(context, 0, words);
+        this.colorResource = colorResource;
     }
 
     @NonNull
@@ -41,7 +43,10 @@ public class WordAdapter extends ArrayAdapter<Word> {
             imageView.setVisibility(View.GONE);
         }
         miworkWord.setText(word.getMiwokWord());
+        miworkWord.setBackgroundResource(colorResource);
+
         defaultWord.setText(word.getDefaultWord());
+        defaultWord.setBackgroundResource(colorResource);
 
         return convertView;
     }
